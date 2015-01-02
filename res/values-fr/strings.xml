@@ -12,6 +12,7 @@
     <string name="notification_recording_error_text">%s</string>
 
     <string name="notification_video_processing_title">Traitement vidéo enregistré</string>
+    <string name="notification_video_finished_title">L\'enregistrement est terminé</string>
 
     <string name="notification_action_stop_recording">Arrêter l\'enregistrement</string>
     <string name="notification_action_show_touch">Toucher pour afficher</string>

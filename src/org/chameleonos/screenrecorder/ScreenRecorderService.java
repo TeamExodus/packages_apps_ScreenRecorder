@@ -163,8 +163,7 @@ public class ScreenRecorderService extends IntentService
     @Override
     public void onRecordingFinished() {
         stopForeground(true);
-        postFinishedNotification();
-        //postRecordingFinishedNotification();
+        postRecordingFinishedNotification();
     }
 
     @Override
@@ -215,19 +214,6 @@ public class ScreenRecorderService extends IntentService
         nm.notify(NOTIFICATION_ID, notice);
     }
 
-    private void postFinishedNotification() {
-        NotificationManager nm =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification notice = new Notification.Builder(this)
-                .setAutoCancel(true)
-                .setOngoing(false)
-                .setContentTitle(getString(R.string.notification_video_finished_title))
-                .setSmallIcon(R.drawable.ic_notify_screen_recorder)
-                .setWhen(System.currentTimeMillis())
-                .build();
-        nm.notify(NOTIFICATION_ID, notice);
-    }
-
     private void postRecordingFinishedNotification() {
         long screenRecordTime = System.currentTimeMillis();
         Uri uri = Uri.fromFile(new File(RECORDER_PATH + File.separator + sCurrentFileName));
@@ -269,7 +255,7 @@ public class ScreenRecorderService extends IntentService
                         getString(com.android.internal.R.string.delete),
                         PendingIntent.getBroadcast(this, 0, deleteIntent,
                                 PendingIntent.FLAG_CANCEL_CURRENT));
-
+/*
         // try and grab a frame as a preview
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
         mmr.setDataSource(RECORDER_PATH + File.separator + sCurrentFileName);
@@ -282,7 +268,7 @@ public class ScreenRecorderService extends IntentService
                             sCurrentFileName));
             b.setStyle(style);
         }
-
+*/
         nm.notify(NOTIFICATION_ID, b.build());
     }
 

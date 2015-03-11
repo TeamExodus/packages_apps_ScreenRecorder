@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bildschirmaufnahme</string>
+
+    <string name="notification_recording_title">Bildschirmaufnahme läuft</string>
+
+    <string name="notification_recording_finished_title">Bildschirmaufnahme gespeichert</string>
+    <string name="notification_recording_finished_text">Berühren um %s anzuzeigen</string>
+
+    <string name="notification_recording_error_title">Fehler bei der Bildschirmaufnahme</string>
+    <string name="notification_recording_error_text">%s</string>
+
+    <string name="notification_video_processing_title">Aufnahme wird verarbeitet</string>
+    <string name="notification_video_finished_title">Aufnahme beendet</string>
+
+    <string name="notification_action_stop_recording">Aufnahme beenden</string>
+    <string name="notification_action_show_touch">Berührungen anzeigen</string>
+
+    <string name="error_unable_to_create_directory">Ausgabeverzeichnis kann nicht erstellt werden.</string>
+    <string name="error_external_storage_unavailable">Externer Speicher ist nicht verfügbar.</string>
+    <string name="error_unable_to_start">Aufnahme kann nicht gestartet werden.</string>
+
+</resources>
